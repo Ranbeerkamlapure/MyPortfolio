@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranbeer's Portfolio - Full Stack Developer</title>
+    
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+   
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary-bg': '#0f172a', // slate-900
+                        'secondary-bg': '#1e293b', // slate-800
+                        'accent': '#34d399', // emerald-400
+                        'text-light': '#f8fafc', // slate-50
+                        'text-muted': '#94a3b8', // slate-400
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Load the Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- Load Lucide Icons for a clean, modern look -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Link External CSS File -->
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body class="bg-primary-bg text-text-light font-sans">
+
+<!-- Navigation Bar (Fixed for easy access) -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-primary-bg/90 backdrop-blur-sm shadow-lg">
+    <nav class="container mx-auto px-4 py-4 flex justify-between items-center max-w-7xl">
+        <!-- Logo and Name -->
+        <a href="#home" class="text-2xl font-bold text-accent tracking-widest flex items-center">
+            <i data-lucide="zap" class="w-7 h-7 mr-2 text-accent fill-accent/50"></i>
+            RANBEER
+        </a>
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex space-x-8">
+            <a href="#home" class="hover:text-accent transition duration-300">Home</a>
+            <a href="#about" class="hover:text-accent transition duration-300">About</a>
+            <a href="#skills" class="hover:text-accent transition duration-300">Skills</a>
+            <a href="#projects" class="hover:text-accent transition duration-300">Projects</a>
+            <a href="#contact" class="hover:text-accent transition duration-300">Contact</a>
+        </div>
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-secondary-bg transition duration-300">
+            <i data-lucide="menu" class="w-6 h-6 text-text-light"></i>
+        </button>
+    </nav>
+    <!-- Mobile Menu Drawer (Hidden by default) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-secondary-bg px-4 pb-4 transition-all duration-300">
+        <a href="#home" class="block py-3 text-text-light hover:text-accent border-b border-gray-700">Home</a>
+        <a href="#about" class="block py-3 text-text-light hover:text-accent border-b border-gray-700">About</a>
+        <a href="#skills" class="block py-3 text-text-light hover:text-accent border-b border-gray-700">Skills</a>
+        <a href="#projects" class="block py-3 text-text-light hover:text-accent border-b border-gray-700">Projects</a>
+        <a href="#contact" class="block py-3 text-text-light hover:text-accent">Contact</a>
+    </div>
+</header>
+
+<main class="pt-20">
+    <!-- Home Section (Hero Banner) -->
+    <section id="home" class="min-h-screen flex items-center justify-center p-8">
+        <div class="container mx-auto max-w-7xl text-center md:text-left">
+            <div class="md:flex items-center justify-between">
+                <div class="md:w-1/2">
+                    <p class="text-xl text-accent mb-2 font-medium">Hello, I'm</p>
+                    <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-4">
+                        Ranbeer, <span class="text-accent">Full Stack</span> Developer
+                    </h1>
+                    <p class="text-text-muted text-lg mb-8 max-w-xl">
+                        I build and deploy end-to-end web applications, specializing in **high-performance architecture**, **clean code**, and **intuitive user experience**.
+                    </p>
+                    <a href="#projects" class="inline-block px-8 py-3 bg-accent text-primary-bg font-semibold rounded-full shadow-lg hover:shadow-xl hover:bg-emerald-300 transition duration-300 transform hover:-translate-y-1">
+                        View Projects
+                    </a>
+                </div>
+                <!-- Placeholder Hero Image/SVG -->
+                <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
+                    <div class="w-64 h-64 md:w-80 md:h-80 bg-secondary-bg rounded-full shadow-2xl flex items-center justify-center border-4 border-accent/50 p-4 transition duration-700 hover:rotate-6">
+                        <i data-lucide="code-square" class="w-32 h-32 md:w-40 md:h-40 text-accent/80"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 bg-secondary-bg p-8">
+        <div class="container mx-auto max-w-7xl">
+            <h2 class="section-title text-4xl font-bold mb-16 text-center mx-auto">About Me</h2>
+            <div class="lg:flex items-center gap-12">
+                <!-- Placeholder Photo -->
+                <div class="lg:w-1/3 flex justify-center mb-8 lg:mb-0">
+                    <!-- Placeholder image with fallback and smooth hover effect -->
+                    <img src="https://placehold.co/300x400/1e293b/a5b4fc?text=Ranbeer's+Photo"
+                         onerror="this.onerror=null;this.src='https://placehold.co/300x400/1e293b/a5b4fc?text=Ranbeer\'s+Photo';"
+                         alt="Ranbeer, the developer"
+                         class="rounded-lg shadow-2xl object-cover w-[300px] h-[400px] border-4 border-accent/50 transform hover:scale-[1.02] transition duration-500">
+                </div>
+                <!-- Bio Text -->
+                <div class="lg:w-2/3">
+                    <h3 class="text-3xl font-semibold mb-4 text-text-light">My Journey</h3>
+                    <p class="text-text-muted leading-relaxed mb-4">
+                        I'm Ranbeer, a passionate software engineer with a knack for turning complex problems into elegant code. Like a **dedicated professional**, I thrive under pressure and always aim for the highest quality in everything I build, be it a scalable cloud application or a stunning frontend interface.
+                    </p>
+                    <p class="text-text-muted leading-relaxed mb-4">
+                        I have spent several years honing my skills across the full stack, but my true passion lies in crafting exceptional user experiences. I believe technology should feel intuitive, powerful, and beautiful. My goal is to build digital solutions that not only work perfectly but also delight the user.
+                    </p>
+                    <p class="text-text-muted leading-relaxed">
+                        When I'm not coding, you can find me exploring new frameworks, reading about astrophysics, or planning my next side project. Let's build something extraordinary together!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 p-8">
+        <div class="container mx-auto max-w-7xl">
+            <h2 class="section-title text-4xl font-bold mb-16 text-center mx-auto">Technical Skills</h2>
+
+            <!-- Skill Categories and Icons -->
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 text-center">
+                <!-- Frontend -->
+                <div class="p-6 bg-secondary-bg rounded-xl shadow-lg hover:shadow-2xl hover:border-accent border border-secondary-bg transition duration-500 transform hover:-translate-y-1">
+                    <i data-lucide="layout-grid" class="w-8 h-8 mx-auto mb-3 text-accent"></i>
+                    <p class="text-lg font-semibold">HTML & CSS</p>
+                    <p class="text-sm text-text-muted">Structure & Style</p>
+                </div>
+                <div class="p-6 bg-secondary-bg rounded-xl shadow-lg hover:shadow-2xl hover:border-accent border border-secondary-bg transition duration-500 transform hover:-translate-y-1">
+                    <i data-lucide="code" class="w-8 h-8 mx-auto mb-3 text-accent"></i>
+                    <p class="text-lg font-semibold">JavaScript</p>
+                    <p class="text-sm text-text-muted">Core Logic</p>
+                </div>
+                <div class="p-6 bg-secondary-bg rounded-xl shadow-lg hover:shadow-2xl hover:border-accent border border-secondary-bg transition duration-500 transform hover:-translate-y-1">
+                    <i data-lucide="component" class="w-8 h-8 mx-auto mb-3 text-accent"></i>
+                    <p class="text-lg font-semibold">React.js</p>
+                    <p class="text-sm text-text-muted">Component Library</p>
+                </div>
+                <!-- Styling/Tools -->
+                <div class="p-6 bg-secondary-bg rounded-xl shadow-lg hover:shadow-2xl hover:border-accent border border-secondary-bg transition duration-500 transform hover:-translate-y-1">
+                    <i data-lucide="zap" class="w-8 h-8 mx-auto mb-3 text-accent"></i>
+                    <p class="text-lg font-semibold">Tailwind CSS</p>
+                    <p class="text-sm text-text-muted">Utility Styling</p>
+                </div>
+                <div class="p-6 bg-secondary-bg rounded-xl shadow-lg hover:shadow-2xl hover:border-accent border border-secondary-bg transition duration-500 transform hover:-translate-y-1">
+                    <i data-lucide="package" class="w-8 h-8 mx-auto mb-3 text-accent"></i>
+                    <p class="text-lg font-semibold">Node.js</p>
+                    <p class="text-sm text-text-muted">Backend</p>
+                </div>
+                <div class="p-6 bg-secondary-bg rounded-xl shadow-lg hover:shadow-2xl hover:border-accent border border-secondary-bg transition duration-500 transform hover:-translate-y-1">
+                    <i data-lucide="database" class="w-8 h-8 mx-auto mb-3 text-accent"></i>
+                    <p class="text-lg font-semibold">PostgreSQL</p>
+                    <p class="text-sm text-text-muted">Database</p>
+                </div>
+            </div>
+
+            <div class="mt-16">
+                <h3 class="text-2xl font-semibold mb-6 text-center">Proficiency</h3>
+                <!-- Simple Progress Bars -->
+                <div class="space-y-6 max-w-3xl mx-auto">
+                    <!-- Progress Bar 1 -->
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-base font-medium text-text-light">Frontend Development (React, JS)</span>
+                            <span class="text-sm font-medium text-accent">90%</span>
+                        </div>
+                        <div class="w-full bg-secondary-bg rounded-full h-2.5">
+                            <div class="bg-accent h-2.5 rounded-full transition-all duration-1000 ease-out" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <!-- Progress Bar 2 -->
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-base font-medium text-text-light">Backend Development (Node.js, Databases)</span>
+                            <span class="text-sm font-medium text-accent">75%</span>
+                        </div>
+                        <div class="w-full bg-secondary-bg rounded-full h-2.5">
+                            <div class="bg-accent h-2.5 rounded-full transition-all duration-1000 ease-out" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    <!-- Progress Bar 3 -->
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-base font-medium text-text-light">Responsive UI/UX Design</span>
+                            <span class="text-sm font-medium text-accent">95%</span>
+                        </div>
+                        <div class="w-full bg-secondary-bg rounded-full h-2.5">
+                            <div class="bg-accent h-2.5 rounded-full transition-all duration-1000 ease-out" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-secondary-bg p-8">
+        <div class="container mx-auto max-w-7xl">
+            <h2 class="section-title text-4xl font-bold mb-16 text-center mx-auto">Featured Projects</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1: E-commerce Platform -->
+                <div class="bg-primary-bg rounded-xl overflow-hidden shadow-xl border border-primary-bg hover:border-accent/50 transition duration-500 transform hover:scale-[1.03]">
+                    <img src="https://placehold.co/600x400/1e293b/34d399?text=Project+1+Preview"
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/34d399?text=Project+1+Preview';"
+                         alt="E-commerce Platform Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-text-light">Galactic Shopper</h3>
+                        <p class="text-text-muted mb-4 text-sm">A full-featured e-commerce platform with Stripe integration and user authentication.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs font-medium bg-accent/20 text-accent px-2 py-1 rounded-full">React</span>
+                            <span class="text-xs font-medium bg-accent/20 text-accent px-2 py-1 rounded-full">Node.js</span>
+                            <span class="text-xs font-medium bg-accent/20 text-accent px-2 py-1 rounded-full">PostgreSQL</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-accent hover:underline flex items-center group">
+                                <i data-lucide="link" class="w-4 h-4 mr-1 group-hover:rotate-12 transition duration-300"></i> Live Demo
+                            </a>
+                            <a href="#" class="text-text-muted hover:text-text-light flex items-center group">
+                                <i data-lucide="github" class="w-4 h-4 mr-1 group-hover:scale-110 transition duration-300"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: Data Visualization -->
+                <div class="bg-primary-bg rounded-xl overflow-hidden shadow-xl border border-primary-bg hover:border-accent/50 transition duration-500 transform hover:scale-[1.03]">
+                    <img src="https://placehold.co/600x400/1e293b/34d399?text=Project+2+Preview"
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/34d399?text=Project+2+Preview';"
+                         alt="Data Visualization Dashboard Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-text-light">Cosmic Tracker</h3>
+                        <p class="text-text-muted mb-4 text-sm">A responsive dashboard for visualizing real-time satellite data using D3.js and React.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs font-medium bg-accent/20 text-accent px-2 py-1 rounded-full">React</span>
+                            <span class="text-xs font-medium bg-accent/20 text-accent px-2 py-1 rounded-full">D3.js</span>
+                            <span class="text-xs font-medium bg-accent/20 text-accent px-2 py-1 rounded-full">API Calls</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-accent hover:underline flex items-center group">
+                                <i data-lucide="link" class="w-4 h-4 mr-1 group-hover:rotate-12 transition duration-300"></i> Live Demo
+                            </a>
+                            <a href="#" class="text-text-muted hover:text-text-light flex items-center group">
+                                <i data-lucide="github" class="w-4 h-4 mr-1 group-hover:scale-110 transition duration-300"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3: Interactive Game (Updated name) -->
+                <div class="bg-primary-bg rounded-xl overflow-hidden shadow-xl border border-primary-bg hover:border-accent/50 transition duration-500 transform hover:scale-[1.03]">
+                    <img src="https://placehold.co/600x400/1e293b/34d399?text=Project+3+Preview"
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/34d399?text=Project+3+Preview';"
+                         alt="Interactive Game Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-text-light">Modern Web Game</h3>
+                        <p class="text-text-muted mb-4 text-sm">An interactive 2D browser game built purely with Vanilla JavaScript and Canvas API.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs font-medium bg-accent/20 text-accent px-2 py-1 rounded-full">JavaScript</span>
+                            <span class="text-xs font-medium bg-accent/20 text-accent px-2 py-1 rounded-full">HTML5 Canvas</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-accent hover:underline flex items-center group">
+                                <i data-lucide="link" class="w-4 h-4 mr-1 group-hover:rotate-12 transition duration-300"></i> Live Demo
+                            </a>
+                            <a href="#" class="text-text-muted hover:text-text-light flex items-center group">
+                                <i data-lucide="github" class="w-4 h-4 mr-1 group-hover:scale-110 transition duration-300"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 p-8">
+        <div class="container mx-auto max-w-7xl">
+            <h2 class="section-title text-4xl font-bold mb-16 text-center mx-auto">Get In Touch</h2>
+
+            <div class="max-w-xl mx-auto bg-secondary-bg p-8 rounded-xl shadow-2xl">
+                <p class="text-text-muted text-center mb-6">Have a project idea or just want to chat about development? Send me a message!</p>
+                
+                <form id="contact-form" class="space-y-4">
+                    <!-- Name Input -->
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-text-light mb-1">Your Name</label>
+                        <input type="text" id="name" name="name" required
+                               class="w-full px-4 py-2 bg-primary-bg border border-slate-700 rounded-lg focus:border-accent focus:ring focus:ring-accent/50 outline-none text-text-light transition duration-300">
+                    </div>
+
+                    <!-- Email Input -->
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-text-light mb-1">Your Email</label>
+                        <input type="email" id="email" name="email" required
+                               class="w-full px-4 py-2 bg-primary-bg border border-slate-700 rounded-lg focus:border-accent focus:ring focus:ring-accent/50 outline-none text-text-light transition duration-300">
+                    </div>
+
+                    <!-- Message Textarea -->
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-text-light mb-1">Message</label>
+                        <textarea id="message" name="message" rows="4" required
+                                  class="w-full px-4 py-2 bg-primary-bg border border-slate-700 rounded-lg focus:border-accent focus:ring focus:ring-accent/50 outline-none text-text-light transition duration-300 resize-none"></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit"
+                            class="w-full px-6 py-3 bg-accent text-primary-bg font-semibold rounded-lg shadow-md hover:bg-emerald-300 transition duration-300 transform hover:scale-[1.01] flex items-center justify-center">
+                        <i data-lucide="send" class="w-5 h-5 mr-2"></i> Send Message
+                    </button>
+
+                    <!-- Success/Error Message Container (Hidden by default) -->
+                    <div id="form-message" class="mt-4 text-center font-medium hidden p-3 rounded-lg"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-primary-bg border-t border-slate-800 py-6">
+    <div class="container mx-auto max-w-7xl px-4 text-center text-text-muted text-sm">
+        <p>&copy; 2025 Ranbeer. Built with passion and the power of Tailwind CSS.</p>
+        <div class="flex justify-center space-x-4 mt-3">
+            <a href="#" class="hover:text-accent transition duration-300"><i data-lucide="github" class="w-5 h-5"></i></a>
+            <a href="#" class="hover:text-accent transition duration-300"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+            <a href="#" class="hover:text-accent transition duration-300"><i data-lucide="mail" class="w-5 h-5"></i></a>
+        </div>
+    </div>
+</footer>
+
+<!-- Link External JavaScript File -->
+<script src="script.js"></script>
+
+</body>
+</html>
